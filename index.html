@@ -3,760 +3,1163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachin Tanwar - AI & Cloud Solutions Architect</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Sachin Tanwar — Software Architect</title>
+    <meta name="description" content="Software Architect with 10+ years building AI-first enterprise systems on Azure Cloud. Leading Innovation at ThrivePass.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo-container">
-                <div class="logo">
-                    <span class="logo-bracket">&lt;</span>
-                    <span class="logo-text">sachintanwar</span>
-                    <span class="logo-bracket">/&gt;</span>
-                </div>
-            </div>
-            <ul class="nav-links">
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">&lt;ST/&gt;</div>
+            <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+            <div class="preloader-label">Loading portfolio...</div>
+        </div>
+    </div>
+
+    <!-- Custom cursor (desktop only) -->
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ============================================================ NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">&lt;ST/&gt;</a>
+            <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-cta">
-                    <a href="https://github.com/sachintanwar2206" target="_blank" class="nav-github-btn">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                </li>
             </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+            <a href="mailto:sachin.tanwar2206@gmail.com" class="btn-primary btn-sm nav-cta">Hire Me</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="mailto:sachin.tanwar2206@gmail.com" class="btn-primary mobile-cta">Hire Me</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================================================ HERO -->
     <section id="home" class="hero">
-        <div class="container">
-            <h1>Hi, I'm <span class="highlight">Sachin Tanwar</span></h1>
-            <p>AI & Cloud Solutions Architect specializing in Azure, DevOps automation, and AI/ML integration</p>
-            
-            <!-- Code Snippet Display -->
-            <div class="code-snippet">
-                <div class="code-header">
-                    <span class="code-lang">Python</span>
-                    <span class="code-file">ai_solution.py</span>
+        <div class="hero-bg">
+            <canvas class="hero-canvas" id="heroCanvas"></canvas>
+            <div class="aurora aurora-1"></div>
+            <div class="aurora aurora-2"></div>
+            <div class="aurora aurora-3"></div>
+            <div class="dot-grid"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-left">
+                <div class="hero-badge fade-up">
+                    <span class="status-dot"></span>
+                    <span>&#9889; Software Architect · AI Innovation Lead</span>
                 </div>
-                <pre><code><span class="code-comment"># Building intelligent cloud solutions</span>
-<span class="code-keyword">def</span> <span class="code-function">deploy_ai_solution</span>():
-    <span class="code-keyword">return</span> {
-        <span class="code-string">"cloud"</span>: <span class="code-string">"Azure"</span>,
-        <span class="code-string">"ai_models"</span>: [<span class="code-string">"GPT-4"</span>, <span class="code-string">"BERT"</span>],
-        <span class="code-string">"status"</span>: <span class="code-string">"production_ready"</span>
-    }</code></pre>
-            </div>
-            
-            <!-- Stats -->
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">9+</span>
-                    <span class="stat-label">Years Experience</span>
+                <h1 class="hero-title fade-up" data-delay="100">
+                    <span id="heroFirst">Sachin</span><br><span class="gradient-text" id="heroLast">Tanwar</span>
+                </h1>
+                <p class="hero-typewriter fade-up" data-delay="200">
+                    I architect <span id="typewriterText"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-description fade-up" data-delay="300">
+                    Software Architect with 10+ years building scalable enterprise systems at the intersection of AI, Cloud, and distributed microservices. Currently leading AI-first innovation at ThrivePass.
+                </p>
+                <div class="hero-buttons fade-up" data-delay="400">
+                    <a href="#contact" class="btn-primary">Get In Touch <i class="fas fa-arrow-right"></i></a>
+                    <a href="#projects" class="btn-ghost">View Work <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1xTtqDlP9trlXC0JYeKyYTvhms0ZFxQLO" target="_blank" class="btn-ghost">Download CV <i class="fas fa-download"></i></a>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">20+</span>
-                    <span class="stat-label">Projects</span>
+                <div class="hero-socials fade-up" data-delay="500">
+                    <a href="https://linkedin.com/in/sachintanwar2206" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/sachintanwar2206" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:sachin.tanwar2206@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">AI Solutions</span>
+            </div>
+            <div class="hero-right fade-up" data-delay="200">
+                <div class="hero-photo-wrapper">
+                    <div class="hero-photo-orbit"></div>
+                    <div class="hero-photo-glow"></div>
+                    <div class="hero-photo-frame">
+                        <img src="profile picture.png" alt="Sachin Tanwar" class="hero-photo-img"
+                             onerror="this.parentElement.innerHTML='<div class=\'hero-photo-fallback\'><span>ST</span></div>'">
+                    </div>
+                    <div class="hero-photo-badge">
+                        <i class="fas fa-code"></i>
+                        <span>Software Architect</span>
+                    </div>
+                    <div class="hero-photo-stat">
+                        <strong>10+</strong><span>Years Exp.</span>
+                    </div>
                 </div>
             </div>
-
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://linkedin.com/in/sachintanwar2206" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/sachintanwar2206" target="_blank" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:sachin.tanwar2206@gmail.com" class="social-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://sachintanwar2206.github.io" target="_blank" class="social-link">
-                    <i class="fas fa-globe"></i>
-                </a>
-            </div>
-
-            <div>
-                <a href="mailto:sachin.tanwar2206@gmail.com" class="btn">Get In Touch</a>
-                <a href="https://github.com/sachintanwar2206" target="_blank" class="btn btn-outline">View Projects</a>
-            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- ============================================================ IMPACT STATS -->
+    <section id="stats" class="stats-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Passionate AI & Cloud Solutions Architect with 9+ years of experience in designing and implementing scalable, intelligent systems that drive business transformation.</p>
-                    <p>I specialize in democratizing AI through cloud-native solutions, helping organizations leverage the power of artificial intelligence and machine learning to solve complex business challenges.</p>
-                    <p>My expertise spans across Azure cloud services, DevOps automation, and full-stack development, bringing a holistic approach to technology solutions.</p>
-                    
-                    <!-- DevOps Code Snippet -->
-                    <div class="code-snippet about-code">
-                        <div class="code-header">
-                            <span class="code-lang">YAML</span>
-                            <span class="code-file">azure-pipeline.yml</span>
-                        </div>
-                        <pre><code><span class="code-comment"># Azure DevOps Pipeline</span>
-<span class="code-keyword">trigger</span>:
-  <span class="code-property">branches</span>:
-    <span class="code-keyword">include</span>: [<span class="code-string">"main"</span>]
-
-<span class="code-keyword">stages</span>:
-- <span class="code-keyword">stage</span>: <span class="code-string">DeployAI</span>
-  <span class="code-keyword">jobs</span>:
-  - <span class="code-keyword">job</span>: <span class="code-string">Azure_ML_Deploy</span>
-    <span class="code-keyword">steps</span>:
-    - <span class="code-property">task</span>: <span class="code-string">AzureFunctionApp@1</span></code></pre>
-                    </div>
+            <div class="stats-grid">
+                <div class="impact-card fade-up" data-delay="0">
+                    <i class="fas fa-brain impact-icon"></i>
+                    <span class="impact-number" data-target="5" data-prefix="" data-suffix="+">0</span>
+                    <span class="impact-label">AI Systems Built</span>
                 </div>
-                <div class="skills">
-                    <div class="skill-category">
-                        <h3>AI & Machine Learning</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">OpenAI</span>
-                            <span class="skill-tag">LangChain</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">Scikit-learn</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Cloud & DevOps</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Azure</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">Terraform</span>
-                            <span class="skill-tag">GitHub Actions</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Development</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                        </div>
-                    </div>
+                <div class="impact-card fade-up" data-delay="100">
+                    <i class="fas fa-calendar-check impact-icon"></i>
+                    <span class="impact-number" data-target="10" data-prefix="" data-suffix="+">0</span>
+                    <span class="impact-label">Years Experience</span>
+                </div>
+                <div class="impact-card fade-up" data-delay="200">
+                    <i class="fas fa-users impact-icon"></i>
+                    <span class="impact-number" data-target="13" data-prefix="" data-suffix="+">0</span>
+                    <span class="impact-label">Engineers Led</span>
+                </div>
+                <div class="impact-card fade-up" data-delay="300">
+                    <i class="fas fa-microphone-alt impact-icon"></i>
+                    <span class="impact-number" data-target="10" data-prefix="" data-suffix="x">0</span>
+                    <span class="impact-label">AI Scale Achieved</span>
+                </div>
+                <div class="impact-card fade-up" data-delay="400">
+                    <i class="fas fa-rocket impact-icon"></i>
+                    <span class="impact-number" data-target="3" data-prefix="" data-suffix="x">0</span>
+                    <span class="impact-label">Productivity Boost</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" style="background: #f8fafc;">
+    <!-- ============================================================ ABOUT -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            
-            <!-- Terminal Command Display -->
-            <div class="terminal-snippet">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="terminal-btn red"></span>
-                        <span class="terminal-btn yellow"></span>
-                        <span class="terminal-btn green"></span>
+            <div class="section-header fade-up">
+                <span class="section-tag">About Me</span>
+                <h2>Building the future, one system at a time</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text fade-up" data-delay="100">
+                    <div class="about-photo-row">
+                        <div class="about-avatar">
+                            <img src="profile picture.png" alt="Sachin Tanwar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="avatar-fallback" style="display:none"><span>ST</span></div>
+                        </div>
+                        <div class="about-name-block">
+                            <span class="about-name">Sachin Tanwar</span>
+                            <span class="about-title-pill">Software Architect</span>
+                        </div>
                     </div>
-                    <span class="terminal-title">sachintanwar@azure:~</span>
+                    <p>I'm a Software Architect based in Delhi, India, with over 10 years of experience designing and delivering large-scale enterprise systems. I currently head the Innovation function at ThrivePass — a US-based product company — where I drive AI-first initiatives that deliver real, measurable business outcomes.</p>
+                    <p>My work lives at the intersection of AI, cloud infrastructure, and distributed systems. I've architected AI-powered reimbursement engines, multilingual voice agents, and enterprise-wide platform migrations — all while leading cross-functional teams of 13+ engineers.</p>
+                    <p>I'm deeply hands-on: I work with Azure OpenAI, build RAG pipelines, design microservices architectures, and ship production code. I introduced GitHub Copilot and Claude Code org-wide, significantly boosting engineering productivity, and I believe great engineering is measured in real business outcomes.</p>
+                    <div class="about-highlights">
+                        <span class="highlight-pill"><i class="fas fa-brain"></i> AI &amp; LLM Systems</span>
+                        <span class="highlight-pill"><i class="fab fa-microsoft"></i> Azure Cloud Architecture</span>
+                        <span class="highlight-pill"><i class="fas fa-network-wired"></i> Microservices &amp; Distributed Systems</span>
+                        <span class="highlight-pill"><i class="fas fa-users-cog"></i> Engineering Leadership</span>
+                    </div>
                 </div>
-                <div class="terminal-body">
-                    <div class="terminal-line">
-                        <span class="terminal-prompt">$</span>
-                        <span class="terminal-command">git clone https://github.com/sachintanwar2206/github-copilot-plotview.git</span>
+                <div class="about-terminal fade-up" data-delay="200">
+                    <div class="terminal-topbar">
+                        <div class="terminal-dots">
+                            <span class="tdot red"></span>
+                            <span class="tdot yellow"></span>
+                            <span class="tdot green"></span>
+                        </div>
+                        <span class="terminal-title">profile.json</span>
                     </div>
-                    <div class="terminal-line">
-                        <span class="terminal-prompt">$</span>
-                        <span class="terminal-command">az functionapp deploy --name copilot-analytics --resource-group ai-solutions</span>
+                    <div class="terminal-body">
+<pre><code>{
+  <span class="json-key">"name"</span>: <span class="json-string">"Sachin Tanwar"</span>,
+  <span class="json-key">"role"</span>: <span class="json-string">"Software Architect"</span>,
+  <span class="json-key">"location"</span>: <span class="json-string">"Delhi, India"</span>,
+  <span class="json-key">"experience_years"</span>: <span class="json-number">10</span>,
+  <span class="json-key">"current_company"</span>: <span class="json-string">"ThrivePass"</span>,
+  <span class="json-key">"specializations"</span>: [
+    <span class="json-string">"AI / LLM Integration"</span>,
+    <span class="json-string">"Azure Cloud"</span>,
+    <span class="json-string">"Microservices"</span>,
+    <span class="json-string">"System Design"</span>
+  ],
+  <span class="json-key">"ai_stack"</span>: [
+    <span class="json-string">"Azure OpenAI"</span>,
+    <span class="json-string">"Claude"</span>,
+    <span class="json-string">"Ollama"</span>,
+    <span class="json-string">"GitHub Copilot"</span>
+  ],
+  <span class="json-key">"impact"</span>: <span class="json-string">"$100K+ saved annually"</span>,
+  <span class="json-key">"impact"</span>: <span class="json-string">"Enterprise AI · Team Leadership"</span>
+}</code></pre>
                     </div>
-                    <div class="terminal-output">✅ AI solutions deployed to production</div>
                 </div>
             </div>
-            
+        </div>
+    </section>
+
+    <!-- ============================================================ SKILLS -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Expertise</span>
+                <h2>Skills &amp; Technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card fade-up" data-delay="0">
+                    <div class="skill-card-icon icon-blue"><i class="fas fa-cloud"></i></div>
+                    <h3>Architecture &amp; Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Software Architecture</span>
+                        <span class="skill-tag">System Design</span>
+                        <span class="skill-tag">Cloud Architecture</span>
+                        <span class="skill-tag">Distributed Systems</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Azure Cloud</span>
+                        <span class="skill-tag">Azure App Services</span>
+                        <span class="skill-tag">Azure AI Services</span>
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">Azure B2C</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" data-delay="100">
+                    <div class="skill-card-icon icon-green"><i class="fas fa-brain"></i></div>
+                    <h3>AI &amp; Intelligent Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure OpenAI (GPT)</span>
+                        <span class="skill-tag">LLM Integration</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">AI Workflow Automation</span>
+                        <span class="skill-tag">Conversational AI</span>
+                        <span class="skill-tag">AI Voice Agents</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">AI Search</span>
+                        <span class="skill-tag">Claude</span>
+                        <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">OCR + LLM Validation</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" data-delay="200">
+                    <div class="skill-card-icon icon-orange"><i class="fas fa-server"></i></div>
+                    <h3>Backend Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">.NET 8</span>
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">.NET Framework</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Web APIs</span>
+                        <span class="skill-tag">MSSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Entity Framework</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" data-delay="300">
+                    <div class="skill-card-icon icon-cyan"><i class="fas fa-code"></i></div>
+                    <h3>Frontend &amp; UI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" data-delay="400">
+                    <div class="skill-card-icon icon-yellow"><i class="fas fa-cogs"></i></div>
+                    <h3>DevOps &amp; Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                        <span class="skill-tag">GitHub Copilot</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Agile SDLC</span>
+                        <span class="skill-tag">SOC 2 Compliance</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" data-delay="500">
+                    <div class="skill-card-icon icon-purple"><i class="fas fa-users-cog"></i></div>
+                    <h3>Leadership &amp; Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Management (13+)</span>
+                        <span class="skill-tag">Technical Leadership</span>
+                        <span class="skill-tag">Mentoring &amp; Hiring</span>
+                        <span class="skill-tag">Stakeholder Management</span>
+                        <span class="skill-tag">Cross-functional Collaboration</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Operational Dashboards</span>
+                        <span class="skill-tag">Reporting Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ EXPERIENCE -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Career</span>
+                <h2>Work Experience</h2>
+            </div>
+            <div class="timeline">
+
+                <!-- ThrivePass Software Architect (Current) -->
+                <div class="timeline-item fade-up" data-delay="0">
+                    <div class="timeline-dot current"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div class="timeline-header-left">
+                                <div class="timeline-meta">
+                                    <span class="timeline-company">ThrivePass</span>
+                                    <span class="timeline-badge current-badge">Current</span>
+                                </div>
+                                <h3 class="timeline-role">Software Architect</h3>
+                                <div class="timeline-info">
+                                    <span><i class="fas fa-calendar"></i> Mar 2023 – Present</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+                                </div>
+                            </div>
+                            <button class="timeline-toggle expanded" aria-label="Toggle details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="timeline-body expanded">
+                            <ul class="timeline-bullets">
+                                <li>Heading <strong>Innovation department</strong>, drove significant reduction in annual operating costs by replacing third-party vendor systems with in-house AI solutions</li>
+                                <li>Architected production <strong>AI-powered reimbursement engine</strong> using Azure OpenAI (GPT) for receipt analysis, policy validation, and automated approve/reject decisioning — delivering measurable annual cost savings</li>
+                                <li>Designed and deployed <strong>multilingual AI Voice Agent</strong> integrated with IVR (Azure + ElevenLabs) — significantly reducing operational support costs</li>
+                                <li>Re-architected AI Voice Agent from monolith into <strong>event-driven microservices</strong> with async processing and message queuing, scaling voice capacity <strong>10x</strong> to handle enterprise-level call volumes</li>
+                                <li>Built <strong>AI-driven code documentation</strong> workflows using GitHub Copilot Agents to automate technical documentation generation and accelerate developer onboarding</li>
+                                <li>Architected <strong>AI-powered code review platform</strong> integrated with CI/CD pipelines and GPT models to automate PR analysis, code quality, and security checks</li>
+                                <li>Introduced <strong>GitHub Copilot &amp; Claude Code</strong> across engineering org with rollout strategy and governance — improved productivity by <strong>2–3x</strong></li>
+                                <li>Led enterprise-wide migration from <strong>.NET Framework to .NET 8</strong>, modernizing architecture and establishing long-term scalability standards</li>
+                                <li>Built LLM-driven apps (Azure OpenAI, GPT, Claude, Ollama) with <strong>AI Search-based contextual retrieval</strong>, significantly reducing manual workload across the platform</li>
+                                <li>Built executive <strong>Power BI dashboards</strong> tracking product ROI and AI-driven savings for C-level strategic decisions</li>
+                                <li>Implemented <strong>i18n and multilingual support</strong> (Dutch, German, Spanish), meaningfully expanding global user reach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ThrivePass Technical Lead -->
+                <div class="timeline-item fade-up" data-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div class="timeline-header-left">
+                                <div class="timeline-meta">
+                                    <span class="timeline-company">ThrivePass</span>
+                                </div>
+                                <h3 class="timeline-role">Technical Lead</h3>
+                                <div class="timeline-info">
+                                    <span><i class="fas fa-calendar"></i> Mar 2020 – Feb 2023</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+                                </div>
+                            </div>
+                            <button class="timeline-toggle" aria-label="Toggle details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="timeline-bullets">
+                                <li>Owned architecture and delivery of an in-house enterprise platform (.NET, Angular, MSSQL), leading cross-functional team of <strong>13 engineers</strong></li>
+                                <li>Developed backend modules for onboarding, payments, and reporting within a <strong>microservices-based architecture</strong> serving a large-scale enterprise user base</li>
+                                <li>Spearheaded migration of on-premises servers to <strong>Azure Cloud</strong>, establishing Azure CI/CD pipelines and app services</li>
+                                <li>Redefined authentication and security architecture, contributing to <strong>SOC 2 compliance</strong> across 10+ standards</li>
+                                <li>Designed centralized logging and observability framework using <strong>C# middleware, Azure Synapse, and Power BI</strong></li>
+                                <li>Designed advanced reporting solutions, reducing manual work by <strong>30–40%</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AppyFactor Senior SE -->
+                <div class="timeline-item fade-up" data-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div class="timeline-header-left">
+                                <div class="timeline-meta">
+                                    <span class="timeline-company">AppyFactor</span>
+                                </div>
+                                <h3 class="timeline-role">Senior Software Engineer</h3>
+                                <div class="timeline-info">
+                                    <span><i class="fas fa-calendar"></i> Feb 2019 – Feb 2020</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+                                </div>
+                            </div>
+                            <button class="timeline-toggle" aria-label="Toggle details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="timeline-bullets">
+                                <li>Led development of a <strong>Windows application</strong> for Pre-Tax Benefit Administrators, streamlining claims and report management</li>
+                                <li>Improved claim-management system logic, significantly reducing internal processing costs</li>
+                                <li>Designed and optimized <strong>MSSQL database</strong> structures, stored procedures, and indexing strategies</li>
+                                <li>Developed an <strong>automatic file parser</strong>, significantly reducing manual operational effort</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AppyFactor SE -->
+                <div class="timeline-item fade-up" data-delay="300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div class="timeline-header-left">
+                                <div class="timeline-meta">
+                                    <span class="timeline-company">AppyFactor</span>
+                                </div>
+                                <h3 class="timeline-role">Software Engineer</h3>
+                                <div class="timeline-info">
+                                    <span><i class="fas fa-calendar"></i> Feb 2017 – Jan 2019</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+                                </div>
+                            </div>
+                            <button class="timeline-toggle" aria-label="Toggle details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="timeline-bullets">
+                                <li>Re-engineered mobile apps and backend systems, cutting response time from <strong>2s to 0.5s</strong></li>
+                                <li>Engineered APIs using <strong>PHP (Laravel, Zend)</strong>, reducing backend processing time by 25% and supporting <strong>10,000+ requests daily</strong></li>
+                                <li>Built <strong>CRM portal</strong> and online store with one-page checkout and multiple payment gateway integrations</li>
+                                <li>Built an <strong>on-demand booking system</strong> ensuring real-time service availability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 29Kreativ -->
+                <div class="timeline-item fade-up" data-delay="400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header" onclick="toggleTimeline(this)">
+                            <div class="timeline-header-left">
+                                <div class="timeline-meta">
+                                    <span class="timeline-company">29Kreativ</span>
+                                </div>
+                                <h3 class="timeline-role">Web Developer Trainee</h3>
+                                <div class="timeline-info">
+                                    <span><i class="fas fa-calendar"></i> Aug 2016 – Jan 2017</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+                                </div>
+                            </div>
+                            <button class="timeline-toggle" aria-label="Toggle details">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="timeline-bullets">
+                                <li>Completed 3-month training in <strong>HTML, CSS, JavaScript, and PHP</strong> within 2 months</li>
+                                <li>Boosted performance for <strong>15 web pages</strong> through mobile-responsive, pixel-perfect designs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ PROJECTS -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Open Source</span>
+                <h2>Featured Projects</h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>MSSQL MCP Server</h3>
+
+                <div class="project-card fade-up" data-delay="0">
+                    <div class="project-card-top">
+                        <div class="project-icon icon-orange"><i class="fas fa-database"></i></div>
                         <div class="project-links">
-                            <a href="https://github.com/sachintanwar2206/mssql-mcp-server" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://github.com/sachintanwar2206/mssql-mcp-server" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                            <a href="https://github.com/sachintanwar2206/mssql-mcp-server" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/sachintanwar2206/mssql-mcp-server" target="_blank" rel="noopener" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <p>A Model Context Protocol (MCP) server that enables AI assistants like GitHub Copilot and Claude to interact directly with Microsoft SQL Server databases — run queries, explore schemas, and manage data through natural language.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">MCP</span>
-                        <span class="tech-tag">SQL Server</span>
-                        <span class="tech-tag">GitHub Copilot</span>
-                        <span class="tech-tag">Claude</span>
-                        <span class="tech-tag">pyodbc</span>
+                    <h3 class="project-title">MSSQL MCP Server</h3>
+                    <p class="project-desc">MCP server enabling AI assistants (GitHub Copilot, Claude) to interact with Microsoft SQL Server databases via natural language — run queries, explore schemas, and manage data.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">MCP</span>
+                        <span class="project-tag">SQL Server</span>
+                        <span class="project-tag">Claude</span>
+                        <span class="project-tag">GitHub Copilot</span>
+                        <span class="project-tag">pyodbc</span>
                     </div>
                     <div class="project-stats">
-                        <span class="stat-item" id="mssql-mcp-stars"><i class="fas fa-star"></i> Loading...</span>
-                        <span class="stat-item" id="mssql-mcp-forks"><i class="fas fa-code-branch"></i> Loading...</span>
-                        <span class="stat-item"><i class="fas fa-database"></i> Natural Language SQL</span>
+                        <span id="mssql-stars"><i class="fas fa-star"></i> —</span>
+                        <span id="mssql-forks"><i class="fas fa-code-branch"></i> —</span>
+                        <span><i class="fas fa-comments"></i> Natural Language SQL</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>ACS AI Voice Connector</h3>
+
+                <div class="project-card fade-up" data-delay="100">
+                    <div class="project-card-top">
+                        <div class="project-icon icon-blue"><i class="fas fa-microphone-alt"></i></div>
                         <div class="project-links">
-                            <a href="https://github.com/sachintanwar2206/acs-ai-voice-connector" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://github.com/sachintanwar2206/acs-ai-voice-connector" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                            <a href="https://github.com/sachintanwar2206/acs-ai-voice-connector" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/sachintanwar2206/acs-ai-voice-connector" target="_blank" rel="noopener" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <p>Python-based WebSocket framework that bridges Azure Communication Services (ACS) calls with AI voice agents for real-time, bi-directional voice interaction. Supports multiple AI providers including ElevenLabs and Azure OpenAI.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Azure Communication Services</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">WebSocket</span>
-                        <span class="tech-tag">ElevenLabs</span>
-                        <span class="tech-tag">Azure OpenAI</span>
+                    <h3 class="project-title">ACS AI Voice Connector</h3>
+                    <p class="project-desc">Python WebSocket framework bridging Azure Communication Services with AI voice agents for real-time bi-directional voice interaction. Supports ElevenLabs and Azure OpenAI.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Azure ACS</span>
+                        <span class="project-tag">FastAPI</span>
+                        <span class="project-tag">WebSocket</span>
+                        <span class="project-tag">ElevenLabs</span>
+                        <span class="project-tag">Azure OpenAI</span>
                     </div>
                     <div class="project-stats">
-                        <span class="stat-item" id="acs-voice-stars"><i class="fas fa-star"></i> Loading...</span>
-                        <span class="stat-item" id="acs-voice-forks"><i class="fas fa-code-branch"></i> Loading...</span>
-                        <span class="stat-item"><i class="fas fa-microphone"></i> Real-time Voice</span>
+                        <span id="acs-stars"><i class="fas fa-star"></i> —</span>
+                        <span id="acs-forks"><i class="fas fa-code-branch"></i> —</span>
+                        <span><i class="fas fa-bolt"></i> Real-time Voice AI</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>GitHub Copilot Analytics Dashboard</h3>
+
+                <div class="project-card fade-up" data-delay="200">
+                    <div class="project-card-top">
+                        <div class="project-icon icon-green"><i class="fas fa-chart-line"></i></div>
                         <div class="project-links">
-                            <a href="https://github.com/sachintanwar2206/github-copilot-plotview" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://github.com/sachintanwar2206/github-copilot-plotview" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                            <a href="https://github.com/sachintanwar2206/github-copilot-plotview" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/sachintanwar2206/github-copilot-plotview" target="_blank" rel="noopener" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <p>End-to-end solution to track, store, and visualize GitHub Copilot usage metrics using Azure Functions, Azure Storage, and Power BI. Features comprehensive dashboards for monitoring productivity and cost savings.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Azure Functions</span>
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Azure Storage</span>
+                    <h3 class="project-title">GitHub Copilot Analytics</h3>
+                    <p class="project-desc">End-to-end solution to track, store, and visualize GitHub Copilot usage metrics using Azure Functions and Power BI. Monitor productivity gains and cost savings at scale.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Azure Functions</span>
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">Azure Storage</span>
                     </div>
                     <div class="project-stats">
-                        <span class="stat-item" id="copilot-stars"><i class="fas fa-star"></i> Loading...</span>
-                        <span class="stat-item" id="copilot-forks"><i class="fas fa-code-branch"></i> Loading...</span>
-                        <span class="stat-item"><i class="fas fa-chart-line"></i> Analytics</span>
+                        <span id="copilot-stars"><i class="fas fa-star"></i> —</span>
+                        <span id="copilot-forks"><i class="fas fa-code-branch"></i> —</span>
+                        <span><i class="fas fa-chart-bar"></i> Analytics Dashboard</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Chat4Free Local AI Assistant</h3>
+
+                <div class="project-card fade-up" data-delay="300">
+                    <div class="project-card-top">
+                        <div class="project-icon icon-purple"><i class="fas fa-robot"></i></div>
                         <div class="project-links">
-                            <a href="https://github.com/sachintanwar2206/chat4free-local-ai" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://github.com/sachintanwar2206/chat4free-local-ai" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
+                            <a href="https://github.com/sachintanwar2206/chat4free-local-ai" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/sachintanwar2206/chat4free-local-ai" target="_blank" rel="noopener" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <p>Free, offline AI chatbot powered by multiple local LLMs with a modern Streamlit interface. Features 4 GPT4All models, real-time status monitoring, and 100% privacy-focused design.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">GPT4All</span>
-                        <span class="tech-tag">LLM</span>
+                    <h3 class="project-title">Chat4Free Local AI</h3>
+                    <p class="project-desc">Free, offline AI chatbot powered by multiple local LLMs with a modern Streamlit interface. Features 4 GPT4All models and 100% privacy-focused design — no cloud, no cost.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Streamlit</span>
+                        <span class="project-tag">GPT4All</span>
+                        <span class="project-tag">Ollama</span>
+                        <span class="project-tag">LLM</span>
                     </div>
                     <div class="project-stats">
-                        <span class="stat-item" id="chat4free-stars"><i class="fas fa-star"></i> Loading...</span>
-                        <span class="stat-item" id="chat4free-size"><i class="fas fa-database"></i> Loading...</span>
-                        <span class="stat-item"><i class="fas fa-robot"></i> 4 AI Models</span>
+                        <span id="chat4free-stars"><i class="fas fa-star"></i> —</span>
+                        <span id="chat4free-forks"><i class="fas fa-code-branch"></i> —</span>
+                        <span><i class="fas fa-lock"></i> 100% Private</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Azure DevOps Automation Suite</h3>
+
+                <div class="project-card fade-up" data-delay="400">
+                    <div class="project-card-top">
+                        <div class="project-icon icon-yellow"><i class="fas fa-infinity"></i></div>
                         <div class="project-links">
-                            <a href="https://github.com/sachintanwar2206" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#contact" class="project-link">
-                                <i class="fas fa-envelope"></i>
-                            </a>
+                            <a href="https://github.com/sachintanwar2206" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <p>Comprehensive DevOps automation framework with Infrastructure as Code, CI/CD pipelines, and monitoring solutions. Deployed across multiple enterprise environments.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Terraform</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Kubernetes</span>
+                    <h3 class="project-title">Azure DevOps Automation Suite</h3>
+                    <p class="project-desc">Comprehensive DevOps automation framework with Infrastructure as Code, CI/CD pipelines, and monitoring solutions deployed across multiple enterprise environments.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Azure</span>
+                        <span class="project-tag">Terraform</span>
+                        <span class="project-tag">GitHub Actions</span>
+                        <span class="project-tag">Kubernetes</span>
+                        <span class="project-tag">Docker</span>
                     </div>
                     <div class="project-stats">
-                        <span class="stat-item"><i class="fas fa-building"></i> Enterprise</span>
-                        <span class="stat-item"><i class="fas fa-cogs"></i> Production</span>
+                        <span><i class="fas fa-building"></i> Enterprise</span>
+                        <span><i class="fas fa-check-circle"></i> Production</span>
+                        <span><i class="fas fa-layer-group"></i> IaC</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ EDUCATION -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Background</span>
+                <h2>Education</h2>
+            </div>
+            <div class="education-card fade-up" data-delay="100">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="education-content">
+                    <h3>Bachelor of Technology in Computer Science &amp; Engineering</h3>
+                    <p class="education-university">Guru Gobind Singh Indraprastha University</p>
+                    <div class="education-meta">
+                        <span><i class="fas fa-calendar"></i> 2012 – 2016</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- ============================================================ CONTACT -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Let's Build Something Amazing</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-intro">
-                        <h3>Ready to Transform Your Business?</h3>
-                        <p>Let's discuss how AI and cloud solutions can bring your vision to life. I specialize in creating scalable, intelligent systems that drive real business results.</p>
+            <div class="section-header fade-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Let's Build Something Great</h2>
+                <p class="section-desc">Have an interesting architecture challenge or AI project? Let's talk.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left fade-up" data-delay="100">
+                    <div class="availability-badge">
+                        <span class="status-dot"></span>
+                        <span>Let's Build Something Great</span>
                     </div>
-                    
+                    <p class="contact-intro">Whether you're looking for a Software Architect, Tech Lead, or an AI systems expert — I'd love to hear from you. Let's talk about how I can help drive your engineering goals.</p>
                     <div class="contact-methods">
                         <a href="mailto:sachin.tanwar2206@gmail.com" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">sachin.tanwar2206@gmail.com</span>
+                            <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-method-info">
+                                <span class="contact-method-label">Email</span>
+                                <span class="contact-method-value">sachin.tanwar2206@gmail.com</span>
                             </div>
                             <i class="fas fa-arrow-right contact-arrow"></i>
                         </a>
-                        
-                        <a href="https://linkedin.com/in/sachintanwar2206" target="_blank" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">LinkedIn</span>
-                                <span class="contact-value">Connect with me</span>
+                        <a href="https://linkedin.com/in/sachintanwar2206" target="_blank" rel="noopener" class="contact-method">
+                            <div class="contact-method-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="contact-method-info">
+                                <span class="contact-method-label">LinkedIn</span>
+                                <span class="contact-method-value">sachintanwar2206</span>
                             </div>
                             <i class="fas fa-arrow-right contact-arrow"></i>
                         </a>
-                        
-                        <a href="https://sachintanwar2206.github.io" target="_blank" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Portfolio</span>
-                                <span class="contact-value">sachintanwar2206.github.io</span>
-                            </div>
-                            <i class="fas fa-arrow-right contact-arrow"></i>
-                        </a>
-                        
-                        <a href="https://github.com/sachintanwar2206" target="_blank" class="contact-method">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">GitHub</span>
-                                <span class="contact-value">View my code</span>
+                        <a href="https://github.com/sachintanwar2206" target="_blank" rel="noopener" class="contact-method">
+                            <div class="contact-method-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-method-info">
+                                <span class="contact-method-label">GitHub</span>
+                                <span class="contact-method-value">sachintanwar2206</span>
                             </div>
                             <i class="fas fa-arrow-right contact-arrow"></i>
                         </a>
                     </div>
                 </div>
-                
-                <form class="contact-form">
-                    <div class="form-header">
-                        <h3>Send a Message</h3>
-                        <p>Tell me about your project and let's start building something amazing together.</p>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <div class="contact-right fade-up" data-delay="200">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="architecture">Architecture Consultation</option>
+                                <option value="ai">AI / LLM Integration</option>
+                                <option value="cloud">Azure Cloud Solution</option>
+                                <option value="leadership">Tech Leadership / Team Lead Role</option>
+                                <option value="collab">Project Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a topic</option>
-                            <option value="ai-consultation">AI Consultation</option>
-                            <option value="cloud-architecture">Cloud Architecture</option>
-                            <option value="devops-automation">DevOps Automation</option>
-                            <option value="project-collaboration">Project Collaboration</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and how I can help..." required></textarea>
-                        <div class="char-count">
-                            <span id="charCount">0</span>/500 characters
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
                         </div>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <span class="btn-text">Send Message</span>
-                        <i class="fas fa-paper-plane btn-icon"></i>
-                    </button>
-                </form>
+                        <button type="submit" class="btn-primary submit-btn" id="submitBtn">
+                            <span class="btn-text">Send Message <i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- ============================================================ FOOTER -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <span class="logo-bracket">&lt;</span>
-                        <span class="logo-text">sachintanwar</span>
-                        <span class="logo-bracket">/&gt;</span>
-                    </div>
-                    <p>&copy; 2025 Sachin Tanwar. All rights reserved.</p>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">&lt;ST/&gt;</span>
+                    <p>Software Architect &middot; AI &amp; Cloud Systems &middot; Delhi, India</p>
                 </div>
-                
-                <div class="footer-right">
-                    <div class="footer-social">
-                        <a href="https://github.com/sachintanwar2206" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/sachintanwar2206" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:sachin.tanwar2206@gmail.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/sachintanwar2206" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/sachintanwar2206" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:sachin.tanwar2206@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sachin Tanwar. All rights reserved.</p>
+                <p>Built with vanilla JS &middot; Deployed on GitHub Pages</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <!-- Section dot navigation -->
+    <nav class="dots-nav" id="dotsNav" aria-label="Section navigation">
+        <a href="#home"       class="dot-link active" data-label="Home"       title="Home"></a>
+        <a href="#about"      class="dot-link"         data-label="About"      title="About"></a>
+        <a href="#skills"     class="dot-link"         data-label="Skills"     title="Skills"></a>
+        <a href="#experience" class="dot-link"         data-label="Experience" title="Experience"></a>
+        <a href="#projects"   class="dot-link"         data-label="Projects"   title="Projects"></a>
+        <a href="#contact"    class="dot-link"         data-label="Contact"    title="Contact"></a>
+    </nav>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
     <script>
-        // GitHub API integration for real-time stats
-        async function fetchGitHubStats() {
-            try {
-                const repos = [
-                    { name: 'mssql-mcp-server', elements: ['mssql-mcp-stars', 'mssql-mcp-forks'] },
-                    { name: 'acs-ai-voice-connector', elements: ['acs-voice-stars', 'acs-voice-forks'] },
-                    { name: 'github-copilot-plotview', elements: ['copilot-stars', 'copilot-forks'] },
-                    { name: 'chat4free-local-ai', elements: ['chat4free-stars', 'chat4free-size'] }
-                ];
+        // ── Navbar scroll state ──────────────────────────────────────────────
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+        const scrollProgressEl = document.getElementById('scrollProgress');
 
-                for (const repo of repos) {
-                    const response = await fetch(`https://api.github.com/repos/sachintanwar2206/${repo.name}`);
-                    if (response.ok) {
-                        const data = await response.json();
-                        
-                        // Update stars
-                        const starsElement = document.getElementById(repo.elements[0]);
-                        if (starsElement) {
-                            starsElement.innerHTML = `<i class="fas fa-star"></i> ${data.stargazers_count} stars`;
-                        }
-                        
-                        // Update second stat
-                        const secondElement = document.getElementById(repo.elements[1]);
-                        if (secondElement && repo.name === 'mssql-mcp-server') {
-                            secondElement.innerHTML = `<i class="fas fa-code-branch"></i> ${data.forks_count} forks`;
-                        } else if (secondElement && repo.name === 'acs-ai-voice-connector') {
-                            secondElement.innerHTML = `<i class="fas fa-code-branch"></i> ${data.forks_count} forks`;
-                        } else if (secondElement && repo.name === 'github-copilot-plotview') {
-                            secondElement.innerHTML = `<i class="fas fa-code-branch"></i> ${data.forks_count} forks`;
-                        } else if (secondElement && repo.name === 'chat4free-local-ai') {
-                            const sizeKB = Math.round(data.size);
-                            secondElement.innerHTML = `<i class="fas fa-database"></i> ${sizeKB} KB`;
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+            updateActiveNav();
+            const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (scrollProgressEl) scrollProgressEl.style.width = pct + '%';
+        }, { passive: true });
+
+        // ── Preloader ────────────────────────────────────────────────────────
+        (function () {
+            const preloader = document.getElementById('preloader');
+            const fill = document.getElementById('preloaderFill');
+            if (!preloader || !fill) return;
+            let progress = 0;
+            const tick = setInterval(() => {
+                progress += Math.random() * 18 + 5;
+                if (progress >= 100) { progress = 100; clearInterval(tick); }
+                fill.style.width = progress + '%';
+                if (progress >= 100) setTimeout(() => preloader.classList.add('hidden'), 350);
+            }, 55);
+        })();
+
+        // ── Custom cursor ────────────────────────────────────────────────────
+        (function () {
+            const ring = document.getElementById('cursorRing');
+            const dot = document.getElementById('cursorDot');
+            if (!ring || !dot) return;
+            if (window.matchMedia('(pointer: coarse)').matches) {
+                ring.style.display = 'none';
+                dot.style.display = 'none';
+                return;
+            }
+            let mx = -200, my = -200, rx = -200, ry = -200;
+            document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+            document.addEventListener('mousedown', () => ring.classList.add('clicking'));
+            document.addEventListener('mouseup', () => ring.classList.remove('clicking'));
+            document.querySelectorAll('a, button, .skill-tag, .project-card, .skill-card, .impact-card, .contact-method, .timeline-header').forEach(el => {
+                el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+                el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+            });
+            (function loop() {
+                rx += (mx - rx) * 0.11;
+                ry += (my - ry) * 0.11;
+                ring.style.left = rx + 'px';
+                ring.style.top = ry + 'px';
+                dot.style.left = mx + 'px';
+                dot.style.top = my + 'px';
+                requestAnimationFrame(loop);
+            })();
+        })();
+
+        // ── Canvas particle network ──────────────────────────────────────────
+        (function () {
+            const canvas = document.getElementById('heroCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const isMobile = window.innerWidth < 768;
+            const COUNT = isMobile ? 25 : 55;
+            const MAX_DIST = 130;
+            let W, H, nodes = [];
+
+            function resize() {
+                W = canvas.width = canvas.offsetWidth;
+                H = canvas.height = canvas.offsetHeight;
+            }
+            window.addEventListener('resize', resize, { passive: true });
+            resize();
+
+            for (let i = 0; i < COUNT; i++) {
+                nodes.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35, r: Math.random() * 1.4 + 0.5 });
+            }
+
+            let mouseX = -999, mouseY = -999;
+            const heroSection = canvas.closest('.hero');
+            if (heroSection) {
+                heroSection.addEventListener('mousemove', e => {
+                    const rect = canvas.getBoundingClientRect();
+                    mouseX = e.clientX - rect.left;
+                    mouseY = e.clientY - rect.top;
+                }, { passive: true });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                for (let i = 0; i < nodes.length; i++) {
+                    const n = nodes[i];
+                    n.x += n.vx; n.y += n.vy;
+                    if (n.x < 0 || n.x > W) n.vx *= -1;
+                    if (n.y < 0 || n.y > H) n.vy *= -1;
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(129,140,248,0.55)';
+                    ctx.fill();
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const m = nodes[j];
+                        const dx = n.x - m.x, dy = n.y - m.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < MAX_DIST) {
+                            ctx.beginPath();
+                            ctx.moveTo(n.x, n.y);
+                            ctx.lineTo(m.x, m.y);
+                            ctx.strokeStyle = `rgba(99,102,241,${0.14 * (1 - dist / MAX_DIST)})`;
+                            ctx.lineWidth = 0.6;
+                            ctx.stroke();
                         }
                     }
+                    const mdx = mouseX - n.x, mdy = mouseY - n.y;
+                    const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                    if (mdist < 160) {
+                        ctx.beginPath();
+                        ctx.moveTo(n.x, n.y);
+                        ctx.lineTo(mouseX, mouseY);
+                        ctx.strokeStyle = `rgba(99,102,241,${0.22 * (1 - mdist / 160)})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
                 }
-            } catch (error) {
-                console.log('GitHub API rate limit or network issue');
-                // Fallback to static values
-                document.getElementById('mssql-mcp-stars').innerHTML = '<i class="fas fa-star"></i> 0 stars';
-                document.getElementById('mssql-mcp-forks').innerHTML = '<i class="fas fa-code-branch"></i> 0 forks';
-                document.getElementById('acs-voice-stars').innerHTML = '<i class="fas fa-star"></i> 0 stars';
-                document.getElementById('acs-voice-forks').innerHTML = '<i class="fas fa-code-branch"></i> 0 forks';
-                document.getElementById('copilot-stars').innerHTML = '<i class="fas fa-star"></i> 2 stars';
-                document.getElementById('copilot-forks').innerHTML = '<i class="fas fa-code-branch"></i> 0 forks';
-                document.getElementById('chat4free-stars').innerHTML = '<i class="fas fa-star"></i> 0 stars';
-                document.getElementById('chat4free-size').innerHTML = '<i class="fas fa-database"></i> 150 KB';
+                requestAnimationFrame(draw);
             }
+            draw();
+        })();
+
+        // ── Text scramble on hero name ───────────────────────────────────────
+        (function () {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*';
+            function scramble(el, finalText, delay, duration) {
+                setTimeout(() => {
+                    const len = finalText.length;
+                    let frame = 0;
+                    const totalFrames = Math.ceil(duration / 40);
+                    const timer = setInterval(() => {
+                        const revealed = Math.floor((frame / totalFrames) * len);
+                        let out = '';
+                        for (let i = 0; i < len; i++) {
+                            if (finalText[i] === ' ') { out += ' '; continue; }
+                            out += i < revealed ? finalText[i] : chars[Math.floor(Math.random() * chars.length)];
+                        }
+                        el.textContent = out;
+                        if (++frame > totalFrames) { el.textContent = finalText; clearInterval(timer); }
+                    }, 40);
+                }, delay);
+            }
+            const first = document.getElementById('heroFirst');
+            const last = document.getElementById('heroLast');
+            if (first) scramble(first, 'Sachin', 600, 900);
+            if (last) scramble(last, 'Tanwar', 700, 1100);
+        })();
+
+        // ── Magnetic buttons ─────────────────────────────────────────────────
+        document.querySelectorAll('.btn-primary:not(.nav-cta):not(.mobile-cta):not(.submit-btn), .btn-ghost').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+                const rect = btn.getBoundingClientRect();
+                const x = (e.clientX - rect.left - rect.width / 2) * 0.18;
+                const y = (e.clientY - rect.top - rect.height / 2) * 0.18;
+                btn.style.transform = `translate(${x}px, ${y}px) translateY(-2px)`;
+            });
+            btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+        });
+
+        // ── 3D card tilt ─────────────────────────────────────────────────────
+        document.querySelectorAll('.project-card, .skill-card, .impact-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `perspective(700px) rotateY(${x * 9}deg) rotateX(${-y * 9}deg) translateY(-6px) scale(1.01)`;
+                card.style.transition = 'box-shadow 0.15s ease, border-color 0.15s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                card.style.transition = 'transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease';
+                setTimeout(() => { card.style.transition = ''; }, 500);
+            });
+        });
+
+        // ── Section dot navigation ────────────────────────────────────────────
+        (function () {
+            const dotLinks = document.querySelectorAll('.dot-link');
+            const sectionIds = ['home', 'about', 'skills', 'experience', 'projects', 'contact'];
+            function updateDots() {
+                let current = sectionIds[0];
+                sectionIds.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el && window.scrollY >= el.offsetTop - 200) current = id;
+                });
+                dotLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${current}`));
+            }
+            window.addEventListener('scroll', updateDots, { passive: true });
+            updateDots();
+        })();
+
+        // ── Back to top ──────────────────────────────────────────────────────
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ── Mobile menu ──────────────────────────────────────────────────────
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        });
+
+        document.querySelectorAll('.mobile-nav-link, .mobile-cta').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // ── Active nav link ──────────────────────────────────────────────────
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 120) current = s.id;
+            });
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+            });
         }
 
-        // Smooth scrolling
+        // ── Smooth scroll ────────────────────────────────────────────────────
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
                 }
             });
         });
 
-        // Enhanced header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const scrollY = window.scrollY;
-            
-            if (scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Animate stats on scroll
-        const observerCallback = (entries) => {
+        // ── Fade-up scroll animations ────────────────────────────────────────
+        const fadeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const statNumbers = entry.target.querySelectorAll('.stat-number');
-                    statNumbers.forEach(stat => {
-                        const finalValue = stat.textContent;
-                        const numericValue = parseInt(finalValue.replace(/\D/g, ''));
-                        const suffix = finalValue.replace(/\d/g, '');
-                        
-                        let current = 0;
-                        const increment = numericValue / 50;
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= numericValue) {
-                                stat.textContent = finalValue;
-                                clearInterval(timer);
-                            } else {
-                                stat.textContent = Math.floor(current) + suffix;
-                            }
-                        }, 30);
-                    });
+                    const delay = parseInt(entry.target.dataset.delay || 0);
+                    setTimeout(() => entry.target.classList.add('visible'), delay);
+                    fadeObserver.unobserve(entry.target);
                 }
             });
-        };
+        }, { threshold: 0.1 });
 
-        const observer = new IntersectionObserver(observerCallback, {
-            threshold: 0.5
-        });
+        document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
 
-        const statsSection = document.querySelector('.stats');
-        if (statsSection) {
-            observer.observe(statsSection);
-        }
-
-        // Add typing effect to hero subtitle
-        const subtitle = document.querySelector('.hero p');
-        if (subtitle) {
-            const text = subtitle.textContent;
-            subtitle.textContent = '';
-            let i = 0;
-            
-            const typeWriter = () => {
-                if (i < text.length) {
-                    subtitle.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 50);
-                }
-            };
-            
-            setTimeout(typeWriter, 1000);
-        }
-
-        // Add fade-in animation for project cards
-        const projectCards = document.querySelectorAll('.project-card');
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 200);
-                }
+        // ── Counter animation ────────────────────────────────────────────────
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target.querySelector('.impact-number');
+                if (!el || el.dataset.animated) return;
+                el.dataset.animated = 'true';
+                const target = parseInt(el.dataset.target);
+                const prefix = el.dataset.prefix || '';
+                const suffix = el.dataset.suffix || '';
+                const step = target / (1500 / 16);
+                let current = 0;
+                const timer = setInterval(() => {
+                    current = Math.min(current + step, target);
+                    el.textContent = prefix + Math.floor(current) + suffix;
+                    if (current >= target) clearInterval(timer);
+                }, 16);
+                counterObserver.unobserve(entry.target);
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.4 });
 
-        projectCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            cardObserver.observe(card);
-        });
+        document.querySelectorAll('.impact-card').forEach(card => counterObserver.observe(card));
 
-        // Logo click effect
-        const logo = document.querySelector('.logo');
-        if (logo) {
-            logo.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
+        // ── Typewriter ───────────────────────────────────────────────────────
+        const typewriterEl = document.getElementById('typewriterText');
+        const phrases = [
+            'AI-first solutions.',
+            'scalable microservices.',
+            'enterprise cloud systems.',
+            'intelligent voice agents.',
+            'developer productivity tools.'
+        ];
+        let phraseIdx = 0, charIdx = 0, isDeleting = false, typeDelay = 100;
 
-        // Back to top button functionality
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('visible');
+        function type() {
+            const current = phrases[phraseIdx];
+            if (isDeleting) {
+                typewriterEl.textContent = current.substring(0, --charIdx);
+                typeDelay = 50;
             } else {
-                backToTopButton.classList.remove('visible');
+                typewriterEl.textContent = current.substring(0, ++charIdx);
+                typeDelay = 100;
             }
+            if (!isDeleting && charIdx === current.length) { isDeleting = true; typeDelay = 1800; }
+            else if (isDeleting && charIdx === 0) { isDeleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; typeDelay = 400; }
+            setTimeout(type, typeDelay);
+        }
+        setTimeout(type, 1200);
+
+        // ── Timeline toggle ──────────────────────────────────────────────────
+        function toggleTimeline(headerEl) {
+            const card = headerEl.closest('.timeline-card');
+            const body = card.querySelector('.timeline-body');
+            const toggle = card.querySelector('.timeline-toggle');
+            const expanded = body.classList.contains('expanded');
+            body.classList.toggle('expanded', !expanded);
+            toggle.classList.toggle('expanded', !expanded);
+        }
+
+        // ── GitHub API ───────────────────────────────────────────────────────
+        [
+            { name: 'mssql-mcp-server',         starsId: 'mssql-stars',      forksId: 'mssql-forks' },
+            { name: 'acs-ai-voice-connector',    starsId: 'acs-stars',        forksId: 'acs-forks' },
+            { name: 'github-copilot-plotview',   starsId: 'copilot-stars',    forksId: 'copilot-forks' },
+            { name: 'chat4free-local-ai',        starsId: 'chat4free-stars',  forksId: 'chat4free-forks' }
+        ].forEach(repo => {
+            fetch(`https://api.github.com/repos/sachintanwar2206/${repo.name}`)
+                .then(r => r.json())
+                .then(data => {
+                    const s = document.getElementById(repo.starsId);
+                    const f = document.getElementById(repo.forksId);
+                    if (s) s.innerHTML = `<i class="fas fa-star"></i> ${data.stargazers_count}`;
+                    if (f) f.innerHTML = `<i class="fas fa-code-branch"></i> ${data.forks_count}`;
+                })
+                .catch(() => {});
         });
 
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // ── Theme toggle ─────────────────────────────────────────────────────
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        function applyTheme(isLight) {
+            document.body.classList.toggle('light', isLight);
+            themeIcon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        }
+
+        // Load saved preference
+        applyTheme(localStorage.getItem('theme') === 'light');
+
+        themeToggle.addEventListener('click', () => {
+            applyTheme(!document.body.classList.contains('light'));
         });
 
-        // Initialize GitHub stats
-        document.addEventListener('DOMContentLoaded', () => {
-            fetchGitHubStats();
-            initializeInteractiveFeatures();
-        });
-
-        // Interactive Features
-        function initializeInteractiveFeatures() {
-            // Character counter for textarea
-            const messageTextarea = document.getElementById('message');
-            const charCount = document.getElementById('charCount');
-            
-            if (messageTextarea && charCount) {
-                messageTextarea.addEventListener('input', () => {
-                    const length = messageTextarea.value.length;
-                    charCount.textContent = length;
-                    
-                    if (length > 450) {
-                        charCount.style.color = '#ef4444';
-                    } else if (length > 350) {
-                        charCount.style.color = '#f59e0b';
-                    } else {
-                        charCount.style.color = '#6b7280';
-                    }
+        // ── Contact form ─────────────────────────────────────────────────────
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const btnText = btn.querySelector('.btn-text');
+            btn.disabled = true;
+            btnText.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            try {
+                const res = await fetch(e.target.action, {
+                    method: 'POST',
+                    body: new FormData(e.target),
+                    headers: { 'Accept': 'application/json' }
                 });
-            }
-
-            // Enhanced form submission
-            const contactForm = document.querySelector('.contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    const submitBtn = contactForm.querySelector('.submit-btn');
-                    const originalText = submitBtn.innerHTML;
-                    
-                    // Simulate sending
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                    submitBtn.disabled = true;
-                    
+                if (res.ok) {
+                    btnText.innerHTML = '<i class="fas fa-check"></i> Sent!';
+                    btn.style.background = 'var(--success)';
+                    e.target.reset();
                     setTimeout(() => {
-                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                        submitBtn.style.background = '#10b981';
-                        
-                        setTimeout(() => {
-                            submitBtn.innerHTML = originalText;
-                            submitBtn.disabled = false;
-                            submitBtn.style.background = '';
-                            contactForm.reset();
-                        }, 2000);
-                    }, 1500);
-                });
+                        btnText.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } else { throw new Error(); }
+            } catch {
+                btnText.innerHTML = '<i class="fas fa-times"></i> Try again';
+                btn.style.background = '#ef4444';
+                setTimeout(() => {
+                    btnText.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
             }
-
-            // Active navigation link update
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('section[id]');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (window.scrollY >= sectionTop - 100) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-            });
-        }
-
-        // Add particle effect to hero section (optional)
-        function createParticles() {
-            const hero = document.querySelector('.hero');
-            const particleCount = 50;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.cssText = `
-                    position: absolute;
-                    width: 2px;
-                    height: 2px;
-                    background: var(--text-accent);
-                    border-radius: 50%;
-                    opacity: 0.3;
-                    animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
-                    left: ${Math.random() * 100}%;
-                    top: ${Math.random() * 100}%;
-                    animation-delay: ${Math.random() * 2}s;
-                `;
-                hero.appendChild(particle);
-            }
-        }
-
-        // Add CSS for particles
-        const style = document.createElement('style');
-        style.textContent = `
-            .hero {
-                position: relative;
-                overflow: hidden;
-            }
-            
-            @keyframes float {
-                0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-                50% { transform: translateY(-20px) rotate(180deg); opacity: 0.6; }
-            }
-            
-            .particle {
-                pointer-events: none;
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Initialize particles
-        setTimeout(createParticles, 2000);
+        });
     </script>
 </body>
 </html>
